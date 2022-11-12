@@ -14,6 +14,9 @@ public class MyMe {
         System.out.println(divisible(5));
 
 
+        System.out.println(isItRectangularTriangle(3,3,4.2));
+
+
     }
 
     private static String getName() {
@@ -56,13 +59,24 @@ public class MyMe {
     }
 
 
-    private static boolean isItTriangle(int a, int b, int c) {
-        double x = Math.pow(a, 2);
-        double y = Math.pow(b, 2);
-        double z = Math.pow(c, 3);
-        if ((((x + y) == z) || ((z + x) == y) || ((y + z) == x))) return true;
-        else return false;
+
+
+    private static boolean isItRectangularTriangle(double a, double b, double c) {
+        if (a > 0 && b>0 &&c> 0) {
+
+            double x = Math.round(Math.pow(a, 2));
+            double y = Math.round(Math.pow(b, 2));
+            double z = Math.round(Math.pow(c, 2));
+
+            return ((((x + y) == z) || ((z + x) == y) || ((y + z) == x)));
+
+        } else {
+
+            throw new IllegalStateException("Wartości a, b i c muszą być większe od zera");
+        }
+
 
     }
+
 
 }
