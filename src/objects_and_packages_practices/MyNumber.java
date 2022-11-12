@@ -3,6 +3,7 @@ package objects_and_packages_practices;
 public class  MyNumber {
 
     private double number;
+    private double value;
 
 
     public boolean isOdd() {
@@ -18,7 +19,14 @@ public class  MyNumber {
     }
 
 
-}
+
+    @Override
+    public String toString() {
+        return String.valueOf(value);
+    }
+
+    }
+
 
 
 
