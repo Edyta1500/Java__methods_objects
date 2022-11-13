@@ -25,6 +25,29 @@ public class  MyNumber {
         return Math.sqrt(number);
     }
 
+    public MyNumber add(MyNumber x){
+        var num = x.getNumber();
+        return new MyNumber(number + num);
+
+    }
+
+    public MyNumber pow(MyNumber x){
+        var num = x.getNumber();
+        return new MyNumber(Math.pow(number, num));
+
+    }
+
+    public MyNumber sub(MyNumber x){
+        var num = x.getNumber();
+        return new MyNumber(number - num);
+    }
+
+    @Override
+    public String toString() {
+        return "MyNumber{" +
+                 + number +
+                '}';
+    }
 }
 
 
